@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spesial Ulang Tahun Untukmu ✨</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome untuk Ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Hubungkan file CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Efek Partikel/Petasan Canvas dari Bawah (Loop Tanpa Batas) -->
+    <canvas id="fireworksCanvas"></canvas>
+
+    <!-- Elemen Hiasan Melayang di Background -->
+    <div class="floating-hearts-bg" id="floatingHeartsBg"></div>
+
+    <!-- Audio Player untuk Lagu MP3 Pilihanmu -->
+    <audio id="bgMusic" loop>
+        <source src="ssstik.io_1789972727366.mp3" type="audio/mp3">
+        Browser Anda tidak mendukung pemutaran audio.
+    </audio>
+
+    <!-- KONTTAINER UTAMA -->
+    <main class="main-container">
+
+        <!-- TAHAP 1: KOTAK KADO DI TENGAH -->
+        <section id="giftSection" class="gift-section">
+            <div class="gift-card-box">
+                <div class="gift-wrapper animate-bounce-gentle" id="giftBox">
+                    <div class="gift-box-inner">🎁</div>
+                </div>
+                <div class="gift-shadow"></div>
+            </div>
+            <h2 class="gift-instruction">Sentuh Kotak Kadonya Ya, Vita! ✨</h2>
+            <p class="gift-subinstruction">Ada kejutan spesial di dalam...</p>
+        </section>
+
+        <!-- TAHAP 2: KONTEN UTAMA (MUNCUL SETELAH KADO DIKLIK) -->
+        <section id="mainContent" class="main-content hidden">
+            
+            <!-- Judul Ucapan -->
+            <div class="header-title fade-in-up">
+                <span class="badge"><i class="fa-solid fa-cake-candles"></i> Selamat Ulang Tahun <i class="fa-solid fa-cake-candles"></i></span>
+                <h1>Yesvita Oktaviani Zendrato</h1>
+                <div class="divider">
+                    <span>❤️</span>
+                </div>
+            </div>
+
+            <!-- BAGIAN ATAS: 3 FOTO DENGAN BENTUK BERAGAM & UNIK -->
+            <div class="photo-section fade-in-up">
+                <div class="photo-shapes-grid">
+                    
+                    <!-- Foto 1: Bentuk Lingkaran Sempurna -->
+                    <div class="shape-card shape-circle">
+                        <img src="foto1.jpeg" alt="Foto Kenangan 1">
+                        <div class="shape-overlay"><span>pap ke 9233x</span></div>
+                    </div>
+
+                    <!-- Foto 2: Bentuk Hati / Oval Estetik -->
+                    <div class="shape-card shape-heart-container">
+                        <div class="heart-mask">
+                            <img src="foto2.jpeg">
+                        </div>
+                        <div class="shape-overlay"><span>nak kamnel</span></div>
+                    </div>
+
+                    <!-- Foto 3: Bentuk Sudut Melengkung Dinamis -->
+                    <div class="shape-card shape-blob">
+                        <img src="foto3.jpeg" alt="Foto Kenangan 3">
+                        <div class="shape-overlay"><span>senyummu</span></div>
+                    </div>
+
+                </div>
+
+                <!-- Kata-kata Tambahan di Bawah Foto -->
+                <div class="photo-subtitle-box">
+                    <p>
+                        "Bukan Adele, bukan Taylor swift, ini Yesvita Oktaviani Zendrago, yang punya senyum manis, tingkah laku random haha. selamat bertambah umur yaaw." ✨
+                    </p>
+                </div>
+            </div>
+
+            <div class="scroll-down-hint">
+                <p>Gulir ke bawah untuk melihat cerita kenangan kita 👇</p>
+            </div>
+
+            <!-- BAGIAN TENGAH: 3 VIDEO DENGAN LAYOUT ZIGZAG KIRI-KANAN & NARASI -->
+            <div class="story-videos-container">
+                
+                <!-- Video 1 (Kiri Video, Kanan Teks) -->
+                <div class="story-row fade-in-up">
+                    <div class="story-media">
+                        <div class="video-frame">
+                            <video autoplay muted loop playsinline>
+                                <source src="video-kenangan.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <div class="story-text-box">
+                        <span class="story-number">01</span>
+                        <h3>Fomo-fomoan haha</h3>
+                        <p class="story-desc">"Vita ingat?, disini kita fomo ikut trend viral, buat love dari sidik jari, kantin jadi saksinya hahay, ketawa sama-sama, trus diliat banyak orang."</p>
+                    </div>
+                </div>
+
+                <!-- Video 2 (Kanan Video, Kiri Teks) - Layout Dibalik -->
+                <div class="story-row reverse-layout fade-in-up">
+                    <div class="story-media">
+                        <div class="video-frame">
+                            <video autoplay muted loop playsinline>
+                                <source src="video-kenangan2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <div class="story-text-box">
+                        <span class="story-number">02</span>
+                        <h3>Random</h3>
+                        <p class="story-desc">"Kalo ini video randommu yang andi editkan, daripada videonya tersimpan di galeri mending di edit kan, trus di upload biar orang lihat vita itu secantik apa."</p>
+                    </div>
+                </div>
+
+                <!-- Video 3 (Kiri Video, Kanan Teks) -->
+                <div class="story-row fade-in-up">
+                    <div class="story-media">
+                        <div class="video-frame">
+                            <video autoplay muted loop playsinline>
+                                <source src="video-kenangan3.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <div class="story-text-box">
+                        <span class="story-number">03</span>
+                        <h3>Tawa & Kebahagiaan</h3>
+                        <p class="story-desc">"Ingat?, ini waktu kita pertama kali jalan-jalan di komplek, sambil makan eskrim kesukaanmu trus kita cerita sampai dikejar anjing hahaha."</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Kotak Kata-kata Romantis Utama -->
+            <div class="message-card fade-in-up">
+                <div class="message-header">
+                    <h3><i class="fa-solid fa-heart-pulse"></i> Pesan Spesial Untukmu</h3>
+                    <span class="date-tag">Hari Bahagiamu</span>
+                </div>
+                <div class="message-body">
+                    <p class="message-text">
+                        "Mungkin kita nda selalu punya waktu buat cerita setiap hari, tapi andi bersyukur pernah punya sahabat seperti vita. Makasih sudah jadi tempat cerita, tempat ketawa, dan orang yang selalu bisa bikin suasana jadi lebih baik. Semoga kita tetap jadi sahabat, sejauh apa pun nanti kita melangkah."
+                    </p>
+                </div>
+                <div class="signature">
+                    <div class="sign-line"></div>
+                    <p>Dengan senyuman dan cinta,</p>
+                    <span class="sign-name">Yang Tulus Menyayangimu ✨</span>
+                </div>
+            </div>
+
+            <!-- TOMBOL MENUJU KUE LILIN DI BAWAH -->
+            <div class="goto-cake-section">
+                <button id="gotoCakeBtn" class="cake-nav-btn">
+                    <i class="fa-solid fa-cake-candles"></i> Tiup Lilin Ulang Tahun Sekarang! 🎂
+                </button>
+            </div>
+
+            <!-- BAGIAN BAWAH: KUE ULANG TAHUN & LILIN INTERAKTIF -->
+            <section id="cakeSection" class="cake-section hidden">
+                <div class="cake-title">
+                    <h2>Waktunya Membuat Permintaan & Tiup Lilin! 🕯️</h2>
+                    <p>Ketuk api untuk memadamkan lilin.</p>
+                </div>
+
+                <div class="birthday-cake-wrapper">
+                    <!-- Lilin di atas kue -->
+                    <div class="candle-assembly">
+                        <div id="candleFlame" class="candle-flame active-flame" title="Klik untuk tiup/matikan lilin!">🔥</div>
+                        <div class="candle-stick"></div>
+                    </div>
+                    <!-- Ilustrasi Kue -->
+                    <div class="cake-body">
+                        <div class="cake-topping"></div>
+                        <div class="cake-layer-top"></div>
+                        <div class="cake-layer-bottom"></div>
+                        <div class="cake-plate"></div>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+
+    </main>
+
+    <!-- POPUP KOTAK PESAN ROMANTIS SETELAH LILIN MATI -->
+    <div id="romanticPopup" class="romantic-popup hidden">
+        <div class="popup-content fade-in-up">
+            <div class="popup-icon">💖</div>
+            <h2>Selamat Ulang Tahun Yesvita Oktaviani Zendrato</h2>
+            <p>
+                "Selamat ulang tahun Vita panjang umur sehat selalu di lancarkan rezekinya fokus dan semangat kuliahnya jadi yang lebih baik semoga dapat pasangan yang seagama seiman dan bisa sayang sama kau."
+            </p>
+            <button id="closePopupBtn" class="close-popup-btn">Terima Kasih Andyy</button>
+        </div>
+    </div>
+
+    <!-- Hubungkan file JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
