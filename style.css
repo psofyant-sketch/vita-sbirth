@@ -349,10 +349,9 @@ body {
 .video-frame video {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Membuat video tampil utuh tanpa ada bagian yang terpotong */
-    background: #000; /* Memberikan latar belakang hitam elegan jika rasio video berbeda */
+    object-fit: cover;
     display: block;
-    max-height: 380px; /* Ditinggikan sedikit agar lebih puas dilihat di layar HP */
+    max-height: 240px;
 }
 
 .story-text-box {
